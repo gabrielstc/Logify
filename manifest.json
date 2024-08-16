@@ -22,10 +22,6 @@
       "*"
     ]
   },
-  "scripts": {
-    "prereleasy": "bash lint.sh"
-  },
-  "credentialType": "absolute",
   "policies": [
     {
       "name": "outbound-access",
