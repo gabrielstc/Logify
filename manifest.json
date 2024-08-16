@@ -1,0 +1,68 @@
+{
+  "name": "logify",
+  "vendor": "corelabiz",
+  "version": "0.1.0",
+  "title": "Logger Service",
+  "description": "For Slack Or Discrod",
+  "mustUpdateAt": "2024-08-16",
+  "categories": [],
+  "dependencies": {},
+  "builders": {
+    "node": "6.x",
+    "docs": "0.x"
+  },
+  "billingOptions": {
+    "termsURL": "https://compliance.vtex.com/gdpr/policies/vtex-privacy-policy",
+    "support": {
+      "url": "https://support.vtex.com/hc/requests"
+    },
+    "free": true,
+    "type": "free",
+    "availableCountries": [
+      "*"
+    ]
+  },
+  "scripts": {
+    "prereleasy": "bash lint.sh"
+  },
+  "credentialType": "absolute",
+  "policies": [
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "httpstat.us",
+        "path": "*"
+      }
+    },
+    {
+      "name": "colossus-fire-event"
+    },
+    {
+      "name": "colossus-write-logs"
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "hooks.slack.com",
+        "path": "/services/*"
+      }
+    }
+  ],
+  "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema",
+  "settingsSchema": {
+    "title": "WebHook Link",
+    "type": "object",
+    "properties": {
+      "slackPath": {
+        "title": "Slack Web Hook Path",
+        "description": "Example /TOKEN1/TOKEN2/Token3",
+        "type": "string"
+      },
+      "discordPath": {
+        "title": "Discord Web Hook Path",
+        "description": "Example /TOKEN1/TOKEN2/Token3",
+        "type": "string"
+      }
+    }
+  }
+}
