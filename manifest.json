@@ -1,7 +1,7 @@
 {
   "name": "logify",
   "vendor": "corelabiz",
-  "version": "0.1.2",
+  "version": "1.0.0",
   "title": "Logger Service",
   "description": "For Slack Or Discrod",
   "mustUpdateAt": "2024-08-16",
